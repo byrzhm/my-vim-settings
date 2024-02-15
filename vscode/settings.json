@@ -1,0 +1,293 @@
+{
+    "vim.smartRelativeLine": true,
+    "vim.history": 20,
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.incsearch": true,
+    "vim.scroll": 0,
+    "vim.normalModeKeyBindings": [
+        { // format document 😂
+            "before": [
+                "Q"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        { // save 😂
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        { // rename element 😂
+            "before": [
+                "leader",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        { // toggle breakpoint 😂
+            "before": [
+                "leader",
+                "b"
+            ],
+            "commands": [
+                "editor.debug.action.toggleBreakpoint"
+            ]
+        },
+        { // select all 😂
+            "before": [
+                "<C-a>"
+            ],
+            "after": [
+                "g",
+                "g",
+                "V",
+                "G"
+            ]
+        },
+        { // go to next error or warning 😂
+            "before": [
+                "tab"
+            ],
+            "commands": [
+                "editor.action.marker.nextInFiles"
+            ]
+        },
+        { // go back 😂
+            "before": [
+                "leader",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.navigateBack"
+            ]
+        },
+        { // go forward 😂
+            "before": [
+                "leader",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.navigateForward"
+            ]
+        },
+        { // toggle integrated terminal 😂
+            "before": [
+                "leader",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
+            ]
+        },
+        { // fold 😂
+            "before": [
+                "leader",
+                "["
+            ],
+            "commands": [
+                "editor.fold"
+            ]
+        },
+        { // unfold 😂
+            "before": [
+                "leader",
+                "]"
+            ],
+            "commands": [
+                "editor.unfold"
+            ]
+        },
+        { // fold all 😂
+            "before": [
+                "leader",
+                "{"
+            ],
+            "commands": [
+                "editor.foldAll"
+            ]
+        },
+        { // unfold all 😂
+            "before": [
+                "leader",
+                "}"
+            ],
+            "commands": [
+                "editor.unfoldAll"
+            ]
+        },
+        { // fold recursively 😂
+            "before": [
+                "space",
+                "["
+            ],
+            "commands": [
+                "editor.foldRecursively"
+            ]
+        },
+        { // unfold recursively 😂
+            "before": [
+                "space",
+                "]"
+            ],
+            "commands": [
+                "editor.unfoldRecursively"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { // easymotion: search n-character 😂
+            "before": [
+                "leader",
+                "f"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "/"
+            ]
+        },
+        // windows navigation 😂
+        { // move to left window
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "<C-w>",
+                "h"
+            ]
+        },
+        { // move to right window
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<C-w>",
+                "l"
+            ]
+        },
+        { // move to down window
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "<C-w>",
+                "j"
+            ]
+        },
+        { // move to up window
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "<C-w>",
+                "k"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        { // use jj to quit 😂
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        { // paste in insert mode
+            "before": [
+                "<C-v>"
+            ],
+            "after": [
+                "Esc",
+                "p"
+            ]
+        },
+        { // select all
+            "before": [
+                "<C-a>"
+            ],
+            "after": [
+                "Esc",
+                "g",
+                "g",
+                "V",
+                "G"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [],
+    "vim.commandLineModeKeyBindings": [],
+    "vim.commandLineModeKeyBindingsNonRecursive": [],
+    "vim.operatorPendingModeKeyBindings": [
+        {
+            // yL dL 👉 y$ d$
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            // yH dH 👉 y^ d^ 
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        }
+    ],
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [],
+    "vim.visualModeKeyBindings": [
+        {
+            // indent lines at visual mode
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            // outdent lines at visual mode
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            // copy in visual mode
+            "before": [
+                "<C-c>"
+            ],
+            "after": [
+                "y"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [],
+    "vim.handleKeys": {
+        // handle by vim
+        "<C-d>": true,
+        "<C-v>": true,
+        "<C-c>": true,
+        "<C-a>": true,
+
+        // use these
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-p>": false
+    }
+}
